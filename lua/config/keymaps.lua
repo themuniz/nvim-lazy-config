@@ -17,6 +17,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   pattern = "*",
 })
 
+-- Editing
+vim.keymap.set("n", "<leader>cq", "<cmd>.s/'/`/g", { desc = "[C]hange [q]uotation mark" })
+vim.keymap.set("n", "<leader>}", "O<esc>j", { desc = "Insert line above" })
+vim.keymap.set("n", "<leader>}", "o<ec>k", { desc = "Insert line below" })
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
